@@ -246,13 +246,13 @@ public class PokemonBattle {
                 byte attackDamage = 25;
                 System.out.println(pokemon + " uses " + firstMove + "!");
                 System.out.println("Attack Damage: " + attackDamage);
-                if (computerChoice == 1) {
+                if (playerChoice == 1) {
                     pikachu -= attackDamage;
                 } 
-                else if (computerChoice == 2) {
+                else if (playerChoice == 2) {
                     bulbasaur -= attackDamage;
                 } 
-                else if (computerChoice == 3) {
+                else if (playerChoice == 3) {
                     charlszard -= attackDamage;
                 }
             }
@@ -260,13 +260,13 @@ public class PokemonBattle {
                 byte attackDamage = 15;
                 System.out.println(pokemon + " uses " + secondMove + "!");
                 System.out.println("Attack Damage: " + attackDamage);
-                if (computerChoice == 1) {
+                if (playerChoice == 1) {
                     pikachu -= attackDamage;
                 } 
-                else if (computerChoice == 2) {
+                else if (playerChoice == 2) {
                     bulbasaur -= attackDamage;
                 } 
-                else if (computerChoice == 3) {
+                else if (playerChoice == 3) {
                     charlszard -= attackDamage;
                 }
             }
