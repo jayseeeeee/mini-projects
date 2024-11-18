@@ -20,32 +20,28 @@ public class PokemonBattle {
         int playerChoice = rng.nextInt(3)+1;
         if (playerChoice == 1) {
             playerPokemon = "Pikachu";
-            System.out.println("Player chooses Pikachu");
         } 
         else if (playerChoice == 2) {
             playerPokemon = "Bulbasaur";
-            System.out.println("Player chooses Bulbasaur");
         } 
         else if (playerChoice == 3) {
             playerPokemon = "Charlszard";
-            System.out.println("Player chooses Charlszard");
         }
+        System.out.println("Player chooses " + playerPokemon);
 
         // Generate random pokemon for computer
         System.out.println("\nIt's Computer AI's turn!");
         int computerChoice = rng.nextInt(3) + 1;
         if (computerChoice == 1) {
             computerPokemon = "Squirtle";
-            System.out.println("Computer AI chooses Squirtle");
         } 
         else if (computerChoice == 2) {
             computerPokemon = "Pidgeotto";
-            System.out.println("Computer AI chooses Pidgeotto");
         } 
         else if (computerChoice == 3) {
             computerPokemon = "Gyarados";
-            System.out.println("Computer AI chooses Gyarados");
         }
+        System.out.println("Computer chooses" + computerPokemon);
 
         // Let player choose their move based on generated player pokemon
         System.out.println("\nChoose a move for " + playerPokemon + "!");
@@ -106,7 +102,7 @@ public class PokemonBattle {
             }
         }
 
-        // Announce pokemon, move, and damage
+        // Announce player pokemon, move, and damage
         System.out.println(playerPokemon + " uses " + playerMove + "!");
         System.out.println("Attack Damage: " + playerDamage);
 
@@ -153,6 +149,8 @@ public class PokemonBattle {
                 computerDamage = 15;
             }
         }
+
+        // Announce computer pokemon, move, and damage
         System.out.println(computerPokemon + " uses " + computerMove + "!");
         System.out.println("Attack Damage: " + computerDamage);
 
