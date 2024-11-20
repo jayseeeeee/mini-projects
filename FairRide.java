@@ -65,5 +65,7 @@ public class FairRide {
 
         // Display final price
         System.out.printf("Your fair for your ride is %.2f\n", fare);
+
+        input.close();
     }
 }
