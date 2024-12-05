@@ -8,14 +8,15 @@ public class PokemonBattle {
 
         byte playerDamage = 0, computerDamage = 0;
         String playerPokemon = "", playerMove = "", computerPokemon = "", computerMove = "";
+        // Set Pokémon starting health value to maximum first
         byte pikachu = 100, bulbasaur = 100, charlszard = 100, squirtle = 100, pidgeotto = 100, gyarados = 100;
 
-        // Introduction of player and computer pokemon
+        // Introduction of player and computer Pokémon
         System.out.println("Welcome to Pokemon Battle!");
         System.out.println("Player and their Pokemon: Pikachu, Bulbasaur, Charlszard");
         System.out.println("Computer AI and their Pokemon: Squirtle, Pidgeotto, Gyarados");
         
-        // Generate random pokemon for player
+        // Generate random Pokémon for player
         System.out.println("\nIt's Player's turn!");
         int playerChoice = rng.nextInt(3)+1;
         if (playerChoice == 1) {
@@ -24,12 +25,12 @@ public class PokemonBattle {
         else if (playerChoice == 2) {
             playerPokemon = "Bulbasaur";
         } 
-        else if (playerChoice == 3) {
+        else {
             playerPokemon = "Charlszard";
         }
         System.out.println("Player chooses " + playerPokemon);
 
-        // Generate random pokemon for computer
+        // Generate random Pokémon for computer
         System.out.println("\nIt's Computer AI's turn!");
         int computerChoice = rng.nextInt(3) + 1;
         if (computerChoice == 1) {
@@ -38,7 +39,7 @@ public class PokemonBattle {
         else if (computerChoice == 2) {
             computerPokemon = "Pidgeotto";
         } 
-        else if (computerChoice == 3) {
+        else {
             computerPokemon = "Gyarados";
         }
         System.out.println("Computer chooses" + computerPokemon);
@@ -83,7 +84,7 @@ public class PokemonBattle {
             }
         }
 
-        else if (playerChoice == 3) {
+        else {
             System.out.println("1. Flamethrower");
             System.out.println("2. Scratch");
             
@@ -102,29 +103,29 @@ public class PokemonBattle {
             }
         }
 
-        // Announce player pokemon, move, and damage
+        // Announce player Pokémon, move, and damage
         System.out.println(playerPokemon + " uses " + playerMove + "!");
         System.out.println("Attack Damage: " + playerDamage);
 
-        // Damage computer pokemon with player move
+        // Damage computer Pokémon with player move
         if (computerChoice == 1) {
             squirtle -= playerDamage;
         } 
         else if (computerChoice == 2) {
             pidgeotto -= playerDamage;
         } 
-        else if (computerChoice == 3) {
+        else {
             gyarados -= playerDamage;
         }
 
-        // Generate computer pokemon move
+        // Generate computer Pokémon move
         int computerChosenMove = rng.nextInt(2) + 1;
         if (computerChoice == 1) {
             if (computerChosenMove == 1) {
                 computerMove = "Water Gun";
                 computerDamage = 20;
             }
-            else if (computerChosenMove == 2) {
+            else {
                 computerMove = "Tackle";
                 computerDamage = 10;
             }
@@ -134,34 +135,34 @@ public class PokemonBattle {
                 computerMove = "Gust";
                 computerDamage = 15;
             }
-            else if (computerChosenMove == 2) {
+            else {
                 computerMove = "Quick Attack";
                 computerDamage = 10;
             }
         }
-        else if (computerChoice == 3) {
+        else {
             if (computerChosenMove == 1) {
                 computerMove = "Hydro Pump";
                 computerDamage = 25;
             }
-            else if (computerChosenMove == 2) {
+            else {
                 computerMove = "Bite";
                 computerDamage = 15;
             }
         }
 
-        // Announce computer pokemon, move, and damage
+        // Announce computer Pokémon, move, and damage
         System.out.println(computerPokemon + " uses " + computerMove + "!");
         System.out.println("Attack Damage: " + computerDamage);
 
-        // Damage player pokemon with computer move
+        // Damage player Pokémon with computer move
         if (playerChoice == 1) {
             pikachu -= computerDamage;
         } 
         else if (playerChoice == 2) {
             bulbasaur -= computerDamage;
         } 
-        else if (playerChoice == 3) {
+        else {
             charlszard -= computerDamage;
         }
 

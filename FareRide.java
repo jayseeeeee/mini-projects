@@ -12,16 +12,16 @@ public class FareRide {
         System.out.println("= = = SELECT MODE OF TRANSPORTATION = = =");
         System.out.println("1. JEEP\n2. BUS");
         System.out.print("Enter your choice: ");
-        int transpoChoice = input.nextInt();
+        int transportChoice = input.nextInt();
         
         // Set the minimum and extra fare for Jeep
-        if (transpoChoice == 1) { 
+        if (transportChoice == 1) {
             minimumFare = 20.00f;
             extraFare = 1.80f;
         }
 
         // Set the minimum and extra fare for Bus
-        else if (transpoChoice == 2 ) {
+        else if (transportChoice == 2 ) {
             minimumFare = 30.00f;
             extraFare = 2.65f;
         }
@@ -60,7 +60,7 @@ public class FareRide {
         }
 
         // Calculate first to see initial fare before applicable discounts
-        if (transpoChoice == 1) {
+        if (transportChoice == 1) {
             fare = minimumFare + ((distance - 4) * extraFare);
         } else {
             fare = ((distance / 4) * minimumFare) + ((distance - 4) * extraFare);
